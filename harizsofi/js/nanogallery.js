@@ -36,14 +36,8 @@ $(document).ready(function () {
             { src: 'img/gallery/sun-leaf.jpg', srct: 'img/gallery/t/sun-leaf-t.jpg'},
             { src: 'img/gallery/sun.jpg', srct: 'img/gallery/t/sun-t.jpg'},
             { src: 'img/gallery/white.jpg', srct: 'img/gallery/t/white-t.jpg'},
-
-
-
-            
-            
-        ],
+      ],
       
-  
       galleryDisplayMode: 'pagination',                 // gallery pagination mode
       galleryMaxRows: 3,                                // gallery with max 3 rows
       gallerySorting: 'random',
