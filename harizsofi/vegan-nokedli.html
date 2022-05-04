@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&family=Sacramento&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/bee62954a8.js" crossorigin="anonymous"></script>
-
     <title>Vegán nokedli</title>
 </head>
 
@@ -21,16 +23,24 @@
 <div class="wrapper-recipes-content">
     <nav>
         <div class="nav-flexbox">
-            <a href="index.html" id="nav-left">coriandella</a>
-            <ul>
-                <li><a href="index.html">kezdőlap</a></li>
-                <li><a href="recipes.html" class="active">receptek</a></li>
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="gallery.html">galéria</a></li>
-                <li><a href="contact.html">kapcsolat</a></li>
+            <div class="logo">
+                <a href="index.html">coriandella</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="hover">kezdőlap</a></li>
+                <li><a href="recipes.html" class="active" class="hover">receptek</a></li>
+                <li><a href="blog.html" class="hover">blog</a></li>
+                <li><a href="gallery.html" class="hover">galéria</a></li>
+                <li><a href="contact.html" class="hover">kapcsolat</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </nav>
+
     <section class="recipe-name">
         <h2>vegán nokedli</h2>
         <time datetime="2022-01-06">2022-01-06</time>
@@ -51,6 +61,7 @@
             <li><i class="fa-brands fa-pagelines"></i>200 ml cukrozatlan mandulatej</li>
         </ul>
     </div>
+
     <div class="recipe">
         <h2>Elkészítés</h2>
         <div class="instructions">
@@ -61,31 +72,34 @@
                     egy szűrővel.</p>
         </div>
     </div>
-    <div class="others">
+
+    <div class="tip">
         <section>
-            <h2>tanácsok trükkök</h2>
+            <h2 class="tip-h2">tanácsok trükkök</h2>
             <article>
-                <ul>
-                    <li>Ha nagyobb adagot szeretnél készíteni, mindenképpen figyelj rá, hogy ne szaggass egyszerre túl
+                <ul class="tip-ul">
+                    <li><i class="fa-solid fa-kitchen-set"></i>Ha nagyobb adagot szeretnél készíteni, mindenképpen figyelj rá, hogy ne szaggass egyszerre túl
                         sokat a forró vízbe, mert akkor az hirtelen lehűl és a nokedlik nem főnek rendesen meg és
                         ragacsosak lesznek.</li>
-                    <li>A már kész nokedliket pár percenként kavard meg, hogy ne ragadjanak össze. A tálalásig le is
+                    <li><i class="fa-solid fa-kitchen-set"></i>A már kész nokedliket pár percenként kavard meg, hogy ne ragadjanak össze. A tálalásig le is
                         fedheted őket, hogy melegek maradjanak és ne kezdjen el kiszáradni a felületük.</li>
-                    <li>Ha csak később szeretnéd elfogyasztani őket, akkor miután kihalásztad őket a vízből, mosd át
+                    <li><i class="fa-solid fa-kitchen-set"></i>Ha csak később szeretnéd elfogyasztani őket, akkor miután kihalásztad őket a vízből, mosd át
                         hideg vízzel és kavard meg párszor, így a tárolás során kevésbé fognak összeragadni.</li>
                 </ul>
             </article>
         </section>
+    </div>
+    <div class="serving">
         <section>
             <h2>hogyan tálald</h2>
             <article>
-                <ul>
-                    <li>A legegyszerűbb módja az, hogy még forrón ráolvasztasz egy kis vegán vajat, majd fekete borssal
+                <ul class="serving-ul">
+                    <li><i class="fa-solid fa-kitchen-set"></i>A legegyszerűbb módja az, hogy még forrón ráolvasztasz egy kis vegán vajat, majd fekete borssal
                         és szerecsendióval fűszerezed.</li>
-                    <li>A nokedli a legtökéletesebb köret a gombapaprikáshoz, a receptet szintén megtalálod az
+                    <li><i class="fa-solid fa-kitchen-set"></i>A nokedli a legtökéletesebb köret a gombapaprikáshoz, a receptet szintén megtalálod az
                         oldalamon.</li>
-                    <li>Zöldséglevesben is megfőzheted, mint a hagyományos tésztát.</li>
-                    <li>Vagy eheted a nokedlit úgy is, ahogy a németek szokták, de akkor Spätzle-nek nevezzük. Főzd meg
+                    <li><i class="fa-solid fa-kitchen-set"></i>Zöldséglevesben is megfőzheted, mint a hagyományos tésztát.</li>
+                    <li><i class="fa-solid fa-kitchen-set"></i>Vagy eheted a nokedlit úgy is, ahogy a németek szokták, de akkor Spätzle-nek nevezzük. Főzd meg
                         a nokedlit ahogy a receptben áll, majd tedd egy serpenyőbe, önts rá egy kis növényi tejszínt és
                         vegán sajtot. Melegítsd, amíg a hozzávalók jól össze nem keverednek. Tálalás előtt szórd meg
                         pirított hagymával.</li>
@@ -93,24 +107,30 @@
             </article>
         </section>
     </div>
-    </div>
-    <footer>
-        <div class="content-footer">
-            <h3>&#169 coriandella</h3>
-            <div class="social-media">
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="">
-                    <i class="fa-brands fa-pinterest-p"></i>
-                </a>
-
-            </div>
+</div>
+<footer>
+    <div class="content-footer">
+        <h3>&#169 coriandella</h3>
+        <div class="social-media">
+            <a href="">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-pinterest-p"></i>
+            </a>
         </div>
-    </footer>
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="blog-slider.js"></script>
-    <script src="js/slick.min.js" type="text/javascript"></script>
-</body>
+    </div>
+</footer>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+<!--jquery-->
+<script src="jquery-3.6.0.min.js"></script>
+<!--js-->
+<script src="blog-slider.js"></script>
+<script src="js/slick.min.js" type="text/javascript"></script>
+<script src="js/my.js"></script>
+<script src="js/burger.js"></script>
+
+</body>
 </html>

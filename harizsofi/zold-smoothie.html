@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&family=Sacramento&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/bee62954a8.js" crossorigin="anonymous"></script>
-
     <title>Zöld smoothie</title>
 </head>
 
@@ -21,16 +23,24 @@
 <div class="wrapper-recipes-content">
     <nav>
         <div class="nav-flexbox">
-            <a href="index.html" id="nav-left">coriandella</a>
-            <ul>
-                <li><a href="index.html">kezdőlap</a></li>
-                <li><a href="recipes.html" class="active">receptek</a></li>
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="gallery.html">galéria</a></li>
-                <li><a href="contact.html">kapcsolat</a></li>
+            <div class="logo">
+                <a href="index.html">coriandella</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="hover">kezdőlap</a></li>
+                <li><a href="recipes.html" class="active" class="hover">receptek</a></li>
+                <li><a href="blog.html" class="hover">blog</a></li>
+                <li><a href="gallery.html" class="hover">galéria</a></li>
+                <li><a href="contact.html" class="hover">kapcsolat</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </nav>
+
     <section class="recipe-name">
         <h2>zöld smoothie</h2>
         <time datetime="2021-11-27">2021-11-27</time>
@@ -41,6 +51,7 @@
             <div class="item"><img src="img/receptek/slider/zoldSmoothie-s1.jpg" alt="zöld smoothie pohárban gyömbérrel"></div>
         </div>
     </div>
+
     <div class="ingredients">
         <h3>Hozzávalók 2 kis pohárhoz vagy egy nagyobb adaghoz</h3>
         <ul>
@@ -50,6 +61,7 @@
             <li><i class="fa-brands fa-pagelines"></i>kis darab gyömbér ízlés szerint</li>
         </ul>
     </div>
+
     <div class="recipe">
         <h2>Elkészítés</h2>
         <div class="instructions">
@@ -60,6 +72,7 @@
         </div>
     </div>
 </div>
+
 <footer>
     <div class="content-footer">
         <h3>&#169 coriandella</h3>
@@ -74,9 +87,16 @@
         </div>
     </div>
 </footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+<!--jquery-->
 <script src="jquery-3.6.0.min.js"></script>
+<!--js-->
 <script src="blog-slider.js"></script>
 <script src="js/slick.min.js" type="text/javascript"></script>
-</body>
+<script src="js/my.js"></script>
+<script src="js/burger.js"></script>
 
+</body>
 </html>
