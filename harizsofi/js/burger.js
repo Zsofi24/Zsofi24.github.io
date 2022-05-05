@@ -30,7 +30,7 @@ const navSlide = () => {
   const navLinks = document.querySelectorAll('.nav-links li');
   //toggle nav
   burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-activee');
+    nav.classList.toggle('nav-active');
 
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
