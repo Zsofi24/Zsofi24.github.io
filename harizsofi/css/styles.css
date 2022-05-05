@@ -6,8 +6,8 @@
 
 body,
 html {
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     font-family: 'Montserrat', sans-serif;
     /* font-size: 100%; */
 }
@@ -353,8 +353,8 @@ nav {
         "recipe-name recipe-name"
         "wrapper wrapper"
         "recipe ingredients"
-        "tip tip"
-        "serving serving"
+        ". tip"
+        "serving ."
         "footer footer";
 }
 
@@ -507,7 +507,6 @@ nav {
     border-bottom-left-radius: 0;
 }
 
-
 .tip {
     grid-area: tip; 
     margin: 30px;
@@ -523,7 +522,17 @@ nav {
     list-style-type: none;
     font-size: 1.1rem;
     line-height: 1.7rem;
-    max-width: 70%;
+    max-width: 90%;
+}
+
+.tip-h2, 
+.serving-h2 {
+    padding-bottom: 10px;
+}
+
+.tip li,
+.serving li {
+    margin-bottom: 15px;
 }
 
 .tip {
@@ -630,6 +639,32 @@ a.section {
 .blog-article time {
     text-align: center;
     font-size: 2rem;
+}
+
+.pager {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: #855b5b;
+    align-content: center;
+}
+
+.pager a {
+    margin: 0 80px;
+    text-decoration: none;
+    color: wheat;
+    
+}
+
+.pager a i{
+    font-size: 2rem;
+    color: wheat;
+    padding: 10px;
+}
+
+.pager a .left {
+    transform: rotateY(180deg);
 }
 
 /* GALLERY */
@@ -908,10 +943,12 @@ footer h3 {
     nav {
         overflow: visible;
         /* display: flex; */
+     
     }
 
     .nav-flexbox {
         justify-content: space-around;
+        
     }
     .nav-links {
         position: absolute;
@@ -937,7 +974,8 @@ footer h3 {
     .container-index {
         display: flex;
         flex-direction: column;
-        max-height: 100%;
+        max-height: 100vh;
+        
     }
 
     .main-img {
