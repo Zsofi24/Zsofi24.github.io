@@ -666,14 +666,13 @@ div#nanogallery2 {
     height: 90vh;
     width: 100%;
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .message-form-small {
-    box-shadow: 0 20px 50px rgba(184, 171, 171, 0.75);
-    width: 70%;
+    box-shadow: 0 20px 50px rgba(133, 131, 131, 0.75);
+    width: 76%;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -737,7 +736,8 @@ div#nanogallery2 {
     width: 100%;
     text-align: center;
     font-family: 'Sacramento', cursive;
-    text-transform: capitalize
+    text-transform: capitalize;
+    font-size: 2.5rem;
 }
 
 .message-form h1, 
@@ -812,6 +812,7 @@ input:focus,
 textarea:focus {
     color: white;
     background-color: rgb(51, 116, 116);
+    border: 1px solid rgb(7, 63, 77)
 
 }
 
@@ -849,7 +850,6 @@ footer h3 {
     font-size: 1.5rem;
     margin: 20px;
     padding: 20px 0 0 0;
-
 }
 
 #myBtn {
@@ -982,8 +982,10 @@ footer h3 {
     }
 
     .contact-main-small {
-        display: block;
+        display: flex;
         overflow-y: hidden;
+        height: 90vh;
+        margin-bottom:0;
     }
 
     
