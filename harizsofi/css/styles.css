@@ -41,8 +41,6 @@ nav {
     align-self: center;
     place-self: center;
     justify-self: center;
-    
-    
 }
 
 .nav-flexbox {
@@ -52,6 +50,11 @@ nav {
     background-color: black;
     /* min-height: 8vh; */
     height: 10vh;
+    /* align-items: center; */
+    padding-left: 15px;
+}
+
+.nav-flexbox :not(.logo) {
     align-items: center;
 }
 
@@ -59,7 +62,7 @@ nav {
     color: white;
     text-decoration: none;
     font-family: 'Sacramento', cursive;
-    font-size: 4.6em;
+    font-size: 4.2em;
     text-transform: capitalize;
 }
 
@@ -145,46 +148,7 @@ nav {
         transform: translateX(0px);
     }
 }
-/* 
-.nav-flexbox ul li {
-    padding: 5px;
-    margin-left: 10px;
-}
 
-.nav-flexbox ul li:last-child {
-    margin: 0;
-    padding: 0;
-}
-
-.nav-flexbox ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 3.8vh;
-    font-size: 2.43vh;
-}
-
-.nav-flexbox a.active {
-    background-color: rgba(255, 255, 255, .7);
-    color: black;
-    border-radius: 50px;
-}
-
-.nav-flexbox ul li a:hover {
-    background-color: rgb(28, 87, 62);
-    border-radius: 50px;
-} */
-
-/* .hover {
-    background: 
-      linear-gradient(#1c573e 0 0) no-repeat
-      calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .08em);
-    transition: .4s calc(var(--i, 0) * .3s), background-position .4s calc(.3s - calc(var(--i, 0) * .3s));
-  }
-  .hover:hover {
-    --i: 1;
-    border-radius: 50px;
-}
-   */
 .main-img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -194,12 +158,12 @@ nav {
     grid-template-areas:
         ". . ."
         ". . ."
-        ". . citation";
+        "scroll . citation";
     grid-area: main-img;
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     background-image: url(../img/bread-index-bg.jpg);
-    filter: sepia(80%);
+    filter: sepia(30%);
     background-attachment: fixed;
     height: 90vh;
     background-position: center;
@@ -208,13 +172,35 @@ nav {
     /* z-index: 4; */
 }
 
+.scroll {
+    align-self: center;
+    justify-self: center;
+    grid-area: scroll;
+}
+
+.scroll-down {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    transform: rotate(270deg);
+}
+.scroll i {
+    color: white;
+    font-size: 4rem;
+    transform-origin: top top;
+    transform: rotate(-270deg);
+    --fa-animation-duration: 4s;
+     --fa-fade-opacity: 0.2;
+}
+
 .citation {
     grid-area: citation;
     color: white;
     align-self: start;
-    padding: 10px;
+    padding: 40px 25px 25px 25px;
+    font-size: 4rem;
+    font-family: 'Sacramento', cursive;
 }
-
 
 .aboutMe {
     grid-area: aboutMe;
@@ -228,7 +214,6 @@ nav {
     font-family: 'Sacramento', cursive;
     text-transform: capitalize;
     text-align: center;
-
 }
 
 .aboutMe p {
@@ -252,8 +237,6 @@ nav {
     align-self: center;
 }
 
-
-
 /* RECIPES */
 
 .recipe-h1 {
@@ -264,19 +247,16 @@ nav {
     color: rgb(24, 21, 21);
     text-transform: capitalize;
     background-color: #855b5b;
-
 }
 
 .wrapper-recipes {
     display: flex;
     width: 100%;
-
     justify-content: space-evenly;
     align-items: center;
     background-color: #855b5b;
     flex-wrap: wrap;
 }
-
 
 .wrapper-recipes a {
     text-decoration: none;
@@ -435,7 +415,6 @@ nav {
     padding: 15px;
 }
 
-
 .instructions p {
     border-top: 2px solid;
     border-color: rgb(88, 27, 27);
@@ -543,6 +522,7 @@ nav {
 .tip-ul li i {
     margin-right: 10px
 }
+
 /* BLOG */
 
 .blog-main {
@@ -646,20 +626,21 @@ a.section {
     justify-content: space-between;
     width: 100%;
     height: 50px;
-    background-color: #855b5b;
+    background-color: white;
     align-content: center;
 }
 
 .pager a {
     margin: 0 80px;
     text-decoration: none;
-    color: wheat;
+    color: rgb(87, 9, 9);
+    font-weight: bold;
     
 }
 
 .pager a i{
     font-size: 2rem;
-    color: wheat;
+    color: rgb(85, 15, 15);
     padding: 10px;
 }
 
@@ -947,9 +928,15 @@ footer h3 {
     }
 
     .nav-flexbox {
-        justify-content: space-around;
-        
+        justify-content: space-between;
+        padding: 0 20px 0 20px;
     }
+
+    .nav-flexbox :not(.logo) {
+        align-items: center;
+        align-self: center;
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
@@ -959,6 +946,7 @@ footer h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
@@ -975,7 +963,6 @@ footer h3 {
         display: flex;
         flex-direction: column;
         max-height: 100vh;
-        
     }
 
     .main-img {
@@ -1025,13 +1012,7 @@ footer h3 {
         height: 90vh;
         margin-bottom:0;
     }
-
-    
 }
-
-
-
-
 
 @media screen and (max-width: 620px) {
     .blog-article h1 {
@@ -1057,6 +1038,19 @@ footer h3 {
 
 .wrapper-form-query {
     display: none;
+}
+
+@media screen and (max-width: 1600px) {
+    .main-img {
+        grid-template-areas:
+            ". . ."
+            ". . ."
+            "scroll citation citation";
+    }
+
+    .citation {
+        justify-self: end;
+    }
 }
 
 
