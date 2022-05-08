@@ -253,6 +253,7 @@ nav {
 
 main {
     z-index: 1;
+    background-color: #855b5b;
 }
 
 .recipe-h1 {
@@ -263,6 +264,7 @@ main {
     color: rgb(24, 21, 21);
     text-transform: capitalize;
     background-color: #855b5b;
+    border-bottom: 10px solid white;
 }
 
 .wrapper-recipes {
@@ -1113,6 +1115,17 @@ footer h3 {
 @media screen and (max-width: 620px) {
     .blog-article h1 {
         font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper-recipes {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 90%;
     }
 }
 
