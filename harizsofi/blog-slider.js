@@ -16,7 +16,6 @@ $(".blog-slider").slick({
   
   arrows: true,
 
-  
 });
 });
 
