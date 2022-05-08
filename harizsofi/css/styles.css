@@ -182,12 +182,11 @@ nav {
     grid-area: scroll;
 }
 
-.scroll-down {
-    text-decoration: none;
-    color: white;
-    position: absolute;
-    transform: rotate(270deg);
+.scroll-flex {
+    display: flex;
+    flex-direction: row;
 }
+
 .scroll i {
     color: white;
     font-size: 4rem;
@@ -195,6 +194,14 @@ nav {
     transform: rotate(-270deg);
     --fa-animation-duration: 4s;
      --fa-fade-opacity: 0.2;
+    margin: -15px;
+}
+
+.scroll-down {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    transform: rotate(270deg);
 }
 
 .citation {
@@ -218,6 +225,7 @@ nav {
     font-family: 'Sacramento', cursive;
     text-transform: capitalize;
     text-align: center;
+    font-size: 40px;
 }
 
 .aboutMe p {
@@ -231,7 +239,7 @@ nav {
     display: block;
     border-radius: 10px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 15px 20px 0 rgba(0, 0, 0, 0.19);
-    filter: saturate(3) grayscale(10%) sepia(50%);
+    filter: saturate(7) grayscale(5%) sepia(61%);
     z-index: -1;
 }
 
@@ -377,22 +385,38 @@ main {
 .ingredients {
     grid-area: ingredients;
     /* grid-column: 1 / 2; */
+    width: 60%;
+    margin: 0 auto;
+}
+
+.ingredients2 {
+    background-color: #bb9479;
+    border-radius: 40px;
     margin: 20px auto;
     padding: 20px;
 }
 
 .ingredients h3 {
-    padding: 0 0 20px 0;
-    font-size: 1.5rem;
+    background-color: rgba(221, 211, 156, 0.911);
+    color: rgb(88, 27, 27);
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 20px;
 }
 
 .ingredients ul {
     list-style-type: none;
     font-size: 1.2rem;
+    padding-top: 15px;
 }
 
 .ingredients ul li {
-    line-height: 30px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: rgb(68, 24, 21);
+    background-color: rgba(221, 211, 156, 0.911);
+    border-radius: 30px;
 }
 
 .ingredients ul li i {
@@ -507,19 +531,33 @@ main {
 .serving-ul, 
 .tip-ul {
     list-style-type: none;
-    font-size: 1.1rem;
-    line-height: 1.7rem;
+    font-size: 1.2rem;
+    padding: 20px;
     max-width: 90%;
+    border-radius: 30px;
+    background-color: rgba(221, 211, 156, 0.911);
 }
 
 .tip-h2, 
 .serving-h2 {
-    padding-bottom: 10px;
+    background-color: rgb(81 106 108);    
+    color: #2a0303;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 20px;
+    max-width: 90%;
+    text-align: center;
 }
 
 .tip li,
 .serving li {
     margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.tip li i,
+.serving li i {
+    color: #2a0303;
 }
 
 .tip {
@@ -542,7 +580,7 @@ main {
     max-width: 100%;
     gap: 30px;
     padding: 30px 0;
-    background-color: #ffc8c871;
+    background-color: #e3e3e3;
 }
 
 a.section {
@@ -554,17 +592,19 @@ a.section {
 .blogs-section {
     /* margin: 40px; */
     /* width: 100%; */
-    padding: 8px;
+    padding: 8px 8px 15px 8px;
     display: flex;
     width: 40%;
+    border-radius: 10px;
     background-color: white;
     box-shadow: 20px 10px 20px 10px rgb(187, 187, 187);
 }
 
 .blogs-section:hover {
-    border: 5px solid rgb(109, 86, 21);
+    border: 5px solid rgb(56, 9, 8);
     border-radius: 20px;
-    background-color: rgba(255, 225, 204, 0.541);
+    filter:sepia(70%);
+    box-shadow: none;
 }
 
 .section h1 {
@@ -593,6 +633,10 @@ a.section {
     padding: 5px;
     width: 15%;
     text-align: center;
+}
+
+.blogs-section.hidden{
+    opacity: 0;
 }
 
 /* BLOG-CONTENT */
@@ -651,7 +695,6 @@ a.section {
     text-decoration: none;
     color: rgb(87, 9, 9);
     font-weight: bold;
-    
 }
 
 .pager a i{
@@ -666,14 +709,15 @@ a.section {
 
 /* GALLERY */
 
-div#nanogallery2 {
+#nanogallery2 {
     background-color: black;
     padding: 10px 20px;
+    height: 92.5vh;
 }
 
 .gallery-content {
-    max-height: 100vh;
     background-color: black;
+
 }
 
 /* CONTACT */
@@ -703,7 +747,7 @@ div#nanogallery2 {
 }
 
 .message-form-small {
-    box-shadow: 0 20px 50px rgba(133, 131, 131, 0.75);
+    box-shadow: 20px 1px 80px rgba(92, 53, 15, 0.75);
     width: 76%;
     padding: 20px;
     display: flex;
@@ -715,7 +759,6 @@ div#nanogallery2 {
     top: 10%;
     left: 10%;
     border-radius: 20px;
-
 }
 
 .form-parent {
@@ -911,6 +954,19 @@ footer h3 {
 
 /* MEDIA QUERY */
 
+@media screen and (max-width: 1600px) {
+    .main-img {
+        grid-template-areas:
+            ". . ."
+            ". . ."
+            "scroll citation citation";
+    }
+
+    .citation {
+        justify-self: end;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .nav-links {
         width: 50%;
@@ -924,11 +980,19 @@ footer h3 {
     .blog-slider .item img {
         width: 60vw;
     }
+    
+    .ingredients {
+        width: 80%
+    }
 }
 
 @media screen and (max-width: 1100px) {
     .nav-links {
         justify-content: end;
+    }
+
+    #recipeSlider .item img {
+        width: 50vw;
     }
 }
 
@@ -974,6 +1038,10 @@ footer h3 {
         transition: transform 0.5s ease-in;
     }
 
+    .nav-links.nav-active li:last-child {
+        margin-right: 0px;
+    }
+
     /* .nav-links li {
         opacity: 0;
     } */
@@ -1013,17 +1081,21 @@ footer h3 {
         flex-direction: column;
     }
 
+    .recipe-name h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+    }
+
+    .ingredients {
+        width: 70%
+    }
+
     .blog-main {
         max-width: 100%;
     }
 
     .blogs-section {
         width: 90%;
-    }
-
-    .recipe-name h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2rem;
     }
 
     .contact-main {
@@ -1036,8 +1108,6 @@ footer h3 {
         height: 90vh;
         margin-bottom:0;
     }
-
-    
 }
 
 @media screen and (max-width: 620px) {
@@ -1056,28 +1126,11 @@ footer h3 {
     }
 }
 
-@media screen and (max-width: 1100px) {
-    #recipeSlider .item img {
-        width: 50vw;
-    }
-}
-
-.wrapper-form-query {
+/* .wrapper-form-query {
     display: none;
-}
+} */
 
-@media screen and (max-width: 1600px) {
-    .main-img {
-        grid-template-areas:
-            ". . ."
-            ". . ."
-            "scroll citation citation";
-    }
 
-    .citation {
-        justify-self: end;
-    }
-}
 
 
 
