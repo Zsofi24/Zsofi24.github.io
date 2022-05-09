@@ -1130,6 +1130,17 @@ footer h3 {
     }
 }
 
+@media screen and (max-width: 565px) {
+    .pager a {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .blog-article p {
+        padding-bottom: 20px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .wrapper-recipes {
         max-width: 90%;
