@@ -707,13 +707,13 @@ a.section {
 .pager a {
     margin: 0 80px;
     text-decoration: none;
-    color: rgb(87, 9, 9);
+    color: rgb(10 42 13);
     font-weight: bold;
 }
 
 .pager a i{
     font-size: 2rem;
-    color: rgb(85, 15, 15);
+    color: rgb(10 42 13);
     padding: 10px;
 }
 
