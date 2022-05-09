@@ -1087,7 +1087,7 @@ footer h3 {
     }
 
     #recipeSlider .item img {
-        width: 60vw;
+        max-width: 80vw;
     }
 
     .wrapper-recipes-content {
@@ -1137,6 +1137,10 @@ footer h3 {
     }
 
     .card {
+        width: 90%;
+    }
+
+    .ingredients {
         width: 90%;
     }
 }
